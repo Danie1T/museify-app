@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommendations
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <form action="/get-recommendations" method="post">
+                <input autocomplete="off" autofocus class="form-control inp" id="url" name="url" placeholder="URL" type="url">
+                <button class="btn btn-secondary btn-lg" type="submit">Find Songs</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

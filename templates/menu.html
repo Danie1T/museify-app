@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Menu
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <a href="/top-tracks" class="btn btn-secondary btn-lg" role="button">Top Tracks</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a href="/top-artists" class="btn btn-secondary btn-lg" role="button">Top Artists</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a href="/get-recommendations" class="btn btn-secondary btn-lg" role="button">Recommendations</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.nav_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+    font-weight: 700;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+    color: #000;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 13px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #4e5761
+}
+
+nav a:before {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #000;
+
+    position: absolute;
+    width: 0%;
+    top: 0;
+
+    transition: all ease 300ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.row {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.btn-sp {
+    background-color: #1DB954;
+    color: #fff
+}
+
+hr {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 20%
+}
+
+.card-container {
+    margin: 10px;
+    overflow: hidden;
+}
+
+
+ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+}
+
+li {
+    padding: 0;
+    margin: 10px;
+}
+
+.rank {
+    width: 20px;
+}
+
+.artist-pic {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.text {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    margin: auto 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inp {
+    margin-bottom: 15px;
+}

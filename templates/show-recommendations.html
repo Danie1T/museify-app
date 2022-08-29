@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommendations
+{% endblock %}
+
+{% block main %}
+    <h5>Playlist Created</h5>
+    <p>View it in Spotify!</p>
+
+    <div class="row">
+        {% for song in songs %}
+        <div class="col-12 col-md-4">
+            <div class="card-container">
+                <ul>
+                    <li>
+                        <div class="pic">
+                            <img src="{{  song['image']  }}" class="artist-pic">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h6>{{  song["name"]  }}</h6>
+                            <p>{{  song["artists"]|join(", ")  }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

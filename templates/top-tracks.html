@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Top Tracks
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <button onclick="toggleOne()" class="btn btn-secondary btn-lg">1 Month</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <button onclick="toggleSix()" class="btn btn-secondary btn-lg">6 Months</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <button onclick="toggleAllTime()" class="btn btn-secondary btn-lg">All-Time</a>
+        </div>
+    </div>
+
+    <div class="row" style="display: none" id="one">
+        {% set ns = namespace(counter=1) %}
+        {% for song in short %}
+        <div class="col-12 col-md-4">
+            <div class="card-container">
+                <ul>
+                    <li>
+                        <h6 class="rank">{{  ns.counter  }}</h6>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="{{  song['image']  }}" class="artist-pic">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h6>{{  song["name"]  }}</h6>
+                            <p>{{  song["artists"]|join(", ")  }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% set ns.counter = ns.counter + 1 %}
+        {% endfor %}
+    </div>
+    <div class="row" style="display: none" id="six">
+        {% set ns = namespace(counter=1) %}
+        {% for song in medium %}
+        <div class="col-12 col-md-4">
+            <div class="card-container">
+                <ul>
+                    <li>
+                        <h6 class="rank">{{  ns.counter  }}</h6>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="{{  song['image']  }}" class="artist-pic">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h6>{{  song["name"]  }}</h6>
+                            <p>{{  song["artists"]|join(", ")  }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% set ns.counter = ns.counter + 1 %}
+        {% endfor %}
+    </div>
+    <div class="row" style="display: none" id="alltime">
+        {% set ns = namespace(counter=1) %}
+        {% for song in long %}
+        <div class="col-12 col-md-4">
+            <div class="card-container">
+                <ul>
+                    <li>
+                        <h6 class="rank">{{  ns.counter  }}</h6>
+                    </li>
+                    <li>
+                        <div class="pic">
+                            <img src="{{  song['image']  }}" class="artist-pic">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text">
+                            <h6>{{  song["name"]  }}</h6>
+                            <p>{{  song["artists"]|join(", ")  }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% set ns.counter = ns.counter + 1 %}
+        {% endfor %}
+    </div>
+
+    <script src="/static/js/filter.js"></script>
+
+{% endblock %}
