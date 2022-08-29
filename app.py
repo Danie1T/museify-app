@@ -166,7 +166,7 @@ def get_recommendations():
             name="Museify",
             public=True,
             collaborative=False,
-            description="Curated by Museify @ link"
+            description="Curated by Museify @ museify.herokuapp.com"
         )
 
         uris = []
